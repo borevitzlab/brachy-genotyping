@@ -1,0 +1,164 @@
+plate name	BARCODE	Enzyme	SubmissionName	ProjectName	R1FileName	DateSubmitted	DateLoaded	DateReturned	AnalysisGroup	DateAnalysed	TasselOutput	SequencerChemistry
+Fungi?					Fungi_AC03WGACXX_4_1_qseqtxtgz			25/10/2011				
+ChicagoSomethingElse?					2011-1685_111007_SN673_0105_AC03WGACXX_4_1_sequencetxtgz			05/10/2012				
+ChicagoPel?					2011-1686_111007_SN673_0105_AC03WGACXX_5_1_sequencetxtgz			05/10/2012				
+PelliePlate2b?	PstI_common	PstI			Pel2b_NoIndex_L001_R1_001fastqgz			13/08/2012	pel			
+PelliePlate2?	PstI_common	PstI		SN877_0153_NAitken_RSB_Pelargonium	Pel2_NoIndex_L001_R1_001fastqgz			24/09/2012	pel			
+PelliePlate3?	PstI_common	PstI		SN877_0159_NAitken_RSB_Pelargonium_gDNA	Pel3_NoIndex_L005_R1_001fastqgz			07/12/2012	pel			
+PelliePlate4	PstI_common	PstI		SN877_0159_NAitken_RSB_Pelargonium_gDNA	Pel4_NoIndex_L006_R1_001fastqgz			07/12/2012	pel			
+EucalyptusPlate1	PstI_common	PstI		SN877_0153_NAitken_RSB_Pelargonium	Euch_NoIndex_L003_R1_001fastqgz			24/09/2012	eu		eu,eu_gbs,ybeu	
+YellowboxPlate1	PstI_common	PstI		SN877_0172_Naitken_RSB_E_meliodora	YellowboxBlock_08_Adult_NoIndex_L008_R1_001fastqgz			24/03/2013	eu		yb,ybeu	
+AcaciaPlate1	PstI_common	PstI		SN877_0153_NAitken_RSB_Pelargonium	Acacia_NoIndex_L002_R1_001fastqgz			24/09/2012	ac		ac	
+BrachypodiumPlate1	PstI_common	PstI		SN877_0158_NAitken_Brachypodium_RSB_gDNA	Brachypodium_plate1_NoIndex_L006_R1_001fastqgz			05/11/2012	bd		bd,bd_gbs,bd1to4	
+BrachypodiumPlate2	PstI_common	PstI		SN877_0158_NAitken_Brachypodium_RSB_gDNA	Brachypodium_plate2_NoIndex_L007_R1_001fastqgz			05/11/2012	bd		bd,bd_gbs,bd1to4,bd2to4,bd2346	
+BrachypodiumPlate3	PstI_common	PstI		SN877_0158_NAitken_Brachypodium_RSB_gDNA	Brachypodium_plate3_NoIndex_L008_R1_001fastqgz			05/11/2012	bd		bd,bd_gbs,bd1to4,bd2to4,bd2346	
+BrachypodiumPlate4	PstI_common	PstI		SN700819R_0100_NAitken_RSB_Brachypodium	Brachy_04_NoIndex_L006_R1_001fastqgz			21/02/2013	bd		bd4,bd4_gbs,bd1to4,bd2to4,bd2346	
+GambusiaPlate1	PstI_common	PstI		SN877_0153_NAitken_RSB_Pelargonium	Gambusia_Plate_1_NoIndex_L005_R1_001fastqgz			04/03/2013	ga		ga	
+SnowgumPlate1	PstI_common	PstI		SN700819R_0100_NAitken_RSB_Epauciflora	Snowgum_01_NoIndex_L005_R1_001fastqgz			12/02/2013	sg		sg	
+SnowgumPlate2	PstI_common	PstI		SN700819R_0135_TStewart_RSB	E_pauciflora_plate2_NoIndex_L005_R1_001fastqgz			19/03/2013	sg		sg1to2	
+BrachyPelPlate1	PstI_common	PstI			BrachyPel_S1_L001_R1_001fastqgz			05/10/2012	bp		bp,bp_gbs	
+BrachypodiumPlate6	PstI_common	PstI		ANU_SN877_0181_JCameron_RSB_Brachypodium	AU11_NoIndex_L007_R1_001fastqgz			17/06/2013	bd		bd6,bd2346	
+Daisy8	PstI_common	PstI		ANU_SN877_0181_ASchmidt_Lebuhn_CSIRO_asteraceae	D8_NoIndex_L006_R1_001fastqgz			17/06/2013	d8		d8	
+BrachypodiumPlate2	CCGGPlate1	MspI		ANU_SN877_0181_NAitken_RSB	567pooled_NoIndex_L008_R1_001fastqgz			17/06/2013	bd_msp1	08/07/2013	b576mspi,b576merged,b576_gbs,b576	
+BrachypodiumPlate3	CCGGPlate2	MspI		ANU_SN877_0181_NAitken_RSB	567pooled_NoIndex_L008_R1_001fastqgz			17/06/2013	bd_msp1	08/07/2013	b576mspi,b576merged,b576_gbs,b576	
+BrachypodiumPlate4	CCGGPlate4	MspI		ANU_SN877_0181_NAitken_RSB	567pooled_NoIndex_L008_R1_001fastqgz			17/06/2013	bd_msp1	08/07/2013	b576mspi,b576merged,b576_gbs,b576	
+BrachypodiumPlate2	CCGGPlate3	HpaII		ANU_SN877_0181_NAitken_RSB	567pooled_NoIndex_L008_R1_001fastqgz			17/06/2013	bd_hpa2	08/07/2013	b576hpaii,b576merged,b576_gbs,b576	
+BrachypodiumPlate3	CCGGPlate5	HpaII		ANU_SN877_0181_NAitken_RSB	567pooled_NoIndex_L008_R1_001fastqgz			17/06/2013	bd_hpa2	08/07/2013	b576hpaii,b576merged,b576_gbs,b576	
+BrachypodiumPlate4	CCGGPlate6	HpaII		ANU_SN877_0181_NAitken_RSB	567pooled_NoIndex_L008_R1_001fastqgz			17/06/2013	bd_hpa2	08/07/2013	b576hpaii,b576merged,b576_gbs,b576	
+RBGPlate1	CCGGPlate1	HpaII	EJames_RBG	ANU_SN1117R_0065_NAitkin_RSB	EII_CA_GBS_NoIndex_L005_R1_001fastqgz			01/11/2013	rbg_hpa2	08/01/2014	rbg_hpa2	
+RBGPlate2	CCGGPlate2	HpaII	EJames_RBG	ANU_SN1117R_0065_NAitkin_RSB	EII_CA_GBS_NoIndex_L005_R1_001fastqgz			01/11/2013	rbg_hpa2	08/01/2014	rbg_hpa2	
+RBGPlate3	CCGGPlate3	HpaII	EJames_RBG	ANU_SN1117R_0065_NAitkin_RSB	EII_CA_GBS_NoIndex_L005_R1_001fastqgz			01/11/2013	rbg_hpa2	08/01/2014	rbg_hpa2	
+RBGPlate1	PstI_common	PstI	EJames_RBG	ANU_SN1117R_0065_NAitkin_RSB	EII_CA_GBS_NoIndex_L005_R1_001fastqgz			01/11/2013	rbg_pst1	08/01/2014	rbg_pst1	
+PellieNicotraPlate3	PstI_common	PstI	PellieNicotraPlate3etal		Pellie_Nicolva_plate3_NoIndex_L006_R1_001fastqgz			01/11/2013	pel			
+PelliePlate3BettongTest	PstI_common	PstI	PellieNicotraPlate3etal		Pellie_Nicolva_plate3_NoIndex_L006_R1_001fastqgz			01/11/2013	banks_bet			
+PelliePlate3PeakallTest	PstI_common	PstI	PellieNicotraPlate3etal		Pellie_Nicolva_plate3_NoIndex_L006_R1_001fastqgz			01/11/2013	peakall			
+PelliePlate3CleomeTest	PstI_common	PstI	PellieNicotraPlate3etal		Pellie_Nicolva_plate3_NoIndex_L006_R1_001fastqgz			01/11/2013	cleome		cl_rerun(pending)	
+PelliePlate3MillerAbaloneTest	PstI_common	PstI	PellieNicotraPlate3etal		Pellie_Nicolva_plate3_NoIndex_L006_R1_001fastqgz			01/11/2013	miller_aba_pst1			
+PelliePlate3MillerAbaloneMspI	CCGGPlate6	MspI	PellieNicotraPlate3etal		Pellie_Nicolva_plate3_NoIndex_L006_R1_001fastqgz			01/11/2013	miller_aba_msp1			
+MillerAbalonePlate1	MspI	MspI			Abalone_Msp1_NoIndex_L002_R1_001fastqgz			05/12/2013	miller_aba_msp1	15/01/2014	miller_aba	
+MillerAlpinePlate1	PstI_common	PstI			Alpine_Plants_PstI_NoIndex_L001_R1_001fastqgz			05/12/2013	miller_alp	18/12/2013	miller_alp	
+BettongPlate1	PstI_common	PstI	BettongPlate1		Bettong_Marsupial_NoIndex_L008_R1_001fastqgz			05/12/2013	banks_bet	08/01/2014	banks_bet	
+PRepensPlate1	PstI_common	PstI	P.repensPlates1-4		P_repens_plates1_4_pstI_NoIndex_L003_R1_001.fastq.gz			05/12/2013	repens	21/02/2014	repens,repens_both	
+PRepensPlate2	PstI_varA	PstI	P.repensPlates1-4		P_repens_plates1_4_pstI_NoIndex_L003_R1_001.fastq.gz			05/12/2013	repens	21/02/2014	repens,repens_both	
+PRepensPlate3	PstI_varB	PstI	P.repensPlates1-4		P_repens_plates1_4_pstI_NoIndex_L003_R1_001.fastq.gz			05/12/2013	repens	21/02/2014	repens,repens_both	
+PRepensPlate4	PstI_varC	PstI	P.repensPlates1-4		P_repens_plates1_4_pstI_NoIndex_L003_R1_001.fastq.gz			05/12/2013	repens	21/02/2014	repens,repens_both	
+PRepensPlate5	PstI_varD	PstI	P.repensPlates5-8PlusCleome		P_repens_plates_5_8_cleome_NoIndex_L007_R1_001.fastq.gz			05/12/2013	repens	21/02/2014	repens,repens_both	
+PRepensPlate6	PstI_varE	PstI	P.repensPlates5-8PlusCleome		P_repens_plates_5_8_cleome_NoIndex_L007_R1_001.fastq.gz			05/12/2013	repens	21/02/2014	repens,repens_both	
+PRepensPlate7	PstI_varF	PstI	P.repensPlates5-8PlusCleome		P_repens_plates_5_8_cleome_NoIndex_L007_R1_001.fastq.gz			05/12/2013	repens	21/02/2014	repens,repens_both	
+PRepensPlate8	PstI_varG	PstI	P.repensPlates5-8PlusCleome		P_repens_plates_5_8_cleome_NoIndex_L007_R1_001.fastq.gz			05/12/2013	repens	21/02/2014	repens,repens_both	
+CleomePlate1	PstI_common	PstI	P.repensPlates5-8PlusCleome	Cleome	P_repens_plates_5_8_cleome_NoIndex_L007_R1_001.fastq.gz			05/12/2013	cleome	05/12/2013	cl,cl_rerun	
+LValpinaPlate1	PstI_varA	PstI	LValpinaPlates1-5	SN877_0210_AMacris_FSES_GBS	Alpine_Tree_Frog_NoIndex_L001_R1_001fastqgz	08/01/2014	17/02/2014	19/02/2014	lva	03/03/2014	lva	
+LValpinaPlate2	PstI_varB	PstI	LValpinaPlates1-5	SN877_0210_AMacris_FSES_GBS	Alpine_Tree_Frog_NoIndex_L001_R1_001fastqgz	08/01/2014	17/02/2014	19/02/2014	lva	03/03/2014	lva	
+LValpinaPlate3	PstI_varD	PstI	LValpinaPlates1-5	SN877_0210_AMacris_FSES_GBS	Alpine_Tree_Frog_NoIndex_L001_R1_001fastqgz	08/01/2014	17/02/2014	19/02/2014	lva	03/03/2014	lva	
+LValpinaPlate4	PstI_varF	PstI	LValpinaPlates1-5	SN877_0210_AMacris_FSES_GBS	Alpine_Tree_Frog_NoIndex_L001_R1_001fastqgz	08/01/2014	17/02/2014	19/02/2014	lva	03/03/2014	lva	
+LValpinaPlate5	PstI_varG	PstI	LValpinaPlates1-5	SN877_0210_AMacris_FSES_GBS	Alpine_Tree_Frog_NoIndex_L001_R1_001fastqgz	08/01/2014	17/02/2014	19/02/2014	lva	03/03/2014	lva	
+BGCocos1	PstIAdapterPlate3	PstI	Cocos_Culicoides_etal	SN1117R_0072_NAitkin_RSB	Sample_Cocos_culicoides_et_al/Cocos_culicoides_et_al_NoIndex_L002_R1_001.fastq.gz	05/03/2014		21/03/2014	bg_coco	13/05/2014	bg_coco	
+BGCocos2	PstIAdapterPlate4	PstI	Cocos_Culicoides_etal	SN1117R_0072_NAitkin_RSB	Sample_Cocos_culicoides_et_al/Cocos_culicoides_et_al_NoIndex_L002_R1_001.fastq.gz	05/03/2014		21/03/2014	bg_coco	13/05/2014	bg_coco	
+CBrevitarsisPlate1	PstIAdapterPlate5	PstI	Cocos_Culicoides_etal	SN1117R_0072_NAitkin_RSB	Sample_Cocos_culicoides_et_al/Cocos_culicoides_et_al_NoIndex_L002_R1_001.fastq.gz	05/03/2014		21/03/2014	bg_culi	13/05/2014	bg_culi	
+HeinsohnParrotTest	PstIAdapterPlate6	PstI	Cocos_Culicoides_etal	SN1117R_0072_NAitkin_RSB	Sample_Cocos_culicoides_et_al/Cocos_culicoides_et_al_NoIndex_L002_R1_001.fastq.gz	05/03/2014		21/03/2014	bg_rest	13/05/2014	bg_rest	
+CFraserKelpTest	PstIAdapterPlate6	PstI	Cocos_Culicoides_etal	SN1117R_0072_NAitkin_RSB	Sample_Cocos_culicoides_et_al/Cocos_culicoides_et_al_NoIndex_L002_R1_001.fastq.gz	05/03/2014		21/03/2014	bg_rest	13/05/2014	bg_rest	
+PRepensPlate2	PstI_varA	PstI	PrepensPlates2-8_rpt	SN1117R_0072_NAitkin_RSB	Sample_P_repens_Plates2_8_rpt/P_repens_Plates2_8_rpt_NoIndex_L003_R1_001.fastq.gz	05/03/2014		21/03/2014	repens_rpt	09/05/2014	repens_rpt,repens_both	
+PRepensPlate3	PstI_varB	PstI	PrepensPlates2-8_rpt	SN1117R_0072_NAitkin_RSB	Sample_P_repens_Plates2_8_rpt/P_repens_Plates2_8_rpt_NoIndex_L003_R1_001.fastq.gz	05/03/2014		21/03/2014	repens_rpt	09/05/2014	repens_rpt,repens_both	
+PRepensPlate4	PstI_varC	PstI	PrepensPlates2-8_rpt	SN1117R_0072_NAitkin_RSB	Sample_P_repens_Plates2_8_rpt/P_repens_Plates2_8_rpt_NoIndex_L003_R1_001.fastq.gz	05/03/2014		21/03/2014	repens_rpt	09/05/2014	repens_rpt,repens_both	
+PRepensPlate5	PstI_varD	PstI	PrepensPlates2-8_rpt	SN1117R_0072_NAitkin_RSB	Sample_P_repens_Plates2_8_rpt/P_repens_Plates2_8_rpt_NoIndex_L003_R1_001.fastq.gz	05/03/2014		21/03/2014	repens_rpt	09/05/2014	repens_rpt,repens_both	
+PRepensPlate6	PstI_varE	PstI	PrepensPlates2-8_rpt	SN1117R_0072_NAitkin_RSB	Sample_P_repens_Plates2_8_rpt/P_repens_Plates2_8_rpt_NoIndex_L003_R1_001.fastq.gz	05/03/2014		21/03/2014	repens_rpt	09/05/2014	repens_rpt,repens_both	
+PRepensPlate7	PstI_varF	PstI	PrepensPlates2-8_rpt	SN1117R_0072_NAitkin_RSB	Sample_P_repens_Plates2_8_rpt/P_repens_Plates2_8_rpt_NoIndex_L003_R1_001.fastq.gz	05/03/2014		21/03/2014	repens_rpt	09/05/2014	repens_rpt,repens_both	
+PRepensPlate8	PstI_varG	PstI	PrepensPlates2-8_rpt	SN1117R_0072_NAitkin_RSB	Sample_P_repens_Plates2_8_rpt/P_repens_Plates2_8_rpt_NoIndex_L003_R1_001.fastq.gz	05/03/2014		21/03/2014	repens_rpt	09/05/2014	repens_rpt,repens_both	
+Ozothamnus	PstIAdapterPlate1	PstI	Craspedia	SN877_0229_ASchmidt_Lebuhn_RSB_Craspedia_Orothamnus_GBS	Sample_Alexander_Schmidt_Lebuhn			05/06/2014	lebuhn_ozo	28/07/2014	lebuhn_ozo	
+Craspedia1	PstIAdapterPlate2	PstI	Craspedia	SN877_0229_ASchmidt_Lebuhn_RSB_Craspedia_Orothamnus_GBS	Sample_Alexander_Schmidt_Lebuhn			05/06/2014	lebuhn_cra	29/07/2014	lebuhn_cra	
+Craspedia2	PstIAdapterPlate3	PstI	Craspedia	SN877_0229_ASchmidt_Lebuhn_RSB_Craspedia_Orothamnus_GBS	Sample_Alexander_Schmidt_Lebuhn			05/06/2014	lebuhn_cra	29/07/2014	lebuhn_cra	
+Craspedia3	PstIAdapterPlate4	PstI	Craspedia	SN877_0229_ASchmidt_Lebuhn_RSB_Craspedia_Orothamnus_GBS	Sample_Alexander_Schmidt_Lebuhn			05/06/2014	lebuhn_cra	29/07/2014	lebuhn_cra	
+BrachypodiumPlate9	PstIAdapterPlate9	PstI	Brachypodium_plate1	SN877_0229_JStreich_RSB_Brachypodium_GBS	Sample_Brachypodium_plate1			05/06/2014	bd910		bd910_gbs	
+BrachypodiumPlate10	PstIAdapterPlate10	PstI	Brachypodium_plate1	SN877_0229_JStreich_RSB_Brachypodium_GBS	Sample_Brachypodium_plate1			05/06/2014	bd910		bd910_gbs	
+Emel003A	PstIAdapterPlate2	PstI	Brachypodium_plate1	SN877_0229_JStreich_RSB_Brachypodium_GBS	Sample_Brachypodium_plate1			05/06/2014	emel3	30/07/2014	emel	
+Emel003B	PstIAdapterPlate1	PstI	Brachypodium_plate1	SN877_0229_JStreich_RSB_Brachypodium_GBS	Sample_Brachypodium_plate1			05/06/2014	emel3	30/07/2014	emel	
+PeleGHPlate1	PstIAdapterPlate1	PstI	Pscabrum_GH1-4	SN877_0254_NAitken_RSB_GBS	Pscabrum_GH1_4_NoIndex_L001_R1_001.fastq.gz	22/08/2014		08/09/2014	Pscabrum_GH			
+PeleGHPlate2	PstIAdapterPlate2	PstI	Pscabrum_GH1-4	SN877_0254_NAitken_RSB_GBS	Pscabrum_GH1_4_NoIndex_L001_R1_001.fastq.gz	22/08/2014		08/09/2014	Pscabrum_GH			
+PeleGHPlate3	PstIAdapterPlate3	PstI	Pscabrum_GH1-4	SN877_0254_NAitken_RSB_GBS	Pscabrum_GH1_4_NoIndex_L001_R1_001.fastq.gz	22/08/2014		08/09/2014	Pscabrum_GH			
+PeleGHPlate4	PstIAdapterPlate4	PstI	Pscabrum_GH1-4	SN877_0254_NAitken_RSB_GBS	Pscabrum_GH1_4_NoIndex_L001_R1_001.fastq.gz	22/08/2014		08/09/2014	Pscabrum_GH			
+PeleGHPlate5	PstIAdapterPlate5	PstI	Pscabrum_GH5-8	SN877_0254_NAitken_RSB_GBS	Pscabrum_GH5_8_NoIndex_L002_R1_001.fastq.gz	22/08/2014		08/09/2014	Pscabrum_GH			
+PeleGHPlate6	PstIAdapterPlate6	PstI	Pscabrum_GH5-8	SN877_0254_NAitken_RSB_GBS	Pscabrum_GH5_8_NoIndex_L002_R1_001.fastq.gz	22/08/2014		08/09/2014	Pscabrum_GH			
+PeleGHPlate7	PstIAdapterPlate7	PstI	Pscabrum_GH5-8	SN877_0254_NAitken_RSB_GBS	Pscabrum_GH5_8_NoIndex_L002_R1_001.fastq.gz	22/08/2014		08/09/2014	Pscabrum_GH			
+PeleGHPlate8	PstIAdapterPlate8	PstI	Pscabrum_GH5-8	SN877_0254_NAitken_RSB_GBS	Pscabrum_GH5_8_NoIndex_L002_R1_001.fastq.gz	22/08/2014		08/09/2014	Pscabrum_GH			
+Alongifolia_Plate1	PstIAdapterPlate1	PstI	Alongifolia1_Emarginata1_2	SN1117R_0088_NAitken_RSB_GBS	Alongifolia1_Emarginata1_2_NoIndex_L007_R1_001.fastq.gz	22/08/2014		05/10/2014	Alongifolia			
+Alongifolia_Plate2	PstIAdapterPlate10	PstI	Alongifolia1_Emarginata1_2	SN1117R_0088_NAitken_RSB_GBS	Alongifolia1_Emarginata1_2_NoIndex_L007_R1_001.fastq.gz	22/08/2014		05/10/2014	Alongifolia			
+Emarginata_Plate1	PstIAdapterPlate9	PstI	Alongifolia1_Emarginata1_2	SN1117R_0088_NAitken_RSB_GBS	Alongifolia1_Emarginata1_2_NoIndex_L007_R1_001.fastq.gz	22/08/2014		05/10/2014	Emarginata			
+Emarginata_Plate2	PstIAdapterPlate10	PstI	Alongifolia1_Emarginata1_2	SN1117R_0088_NAitken_RSB_GBS	Alongifolia1_Emarginata1_2_NoIndex_L007_R1_001.fastq.gz	22/08/2014		05/10/2014	Emarginata			
+Diuris_Plate1	PstIAdapterPlate6	PstI	Stonefly1_Diuris1_2	SN1117R_0088_NAitken_RSB_GBS	Stonefly_1_Diuris_1_2_NoIndex_L006_R1_001.fastq.gz	22/08/2014		05/10/2014	Diuris			
+Diuris_Plate2	PstIAdapterPlate7	PstI	Stonefly1_Diuris1_2	SN1117R_0088_NAitken_RSB_GBS	Stonefly_1_Diuris_1_2_NoIndex_L006_R1_001.fastq.gz	22/08/2014		05/10/2014	Diuris			
+Stonefly_Plate1	PstIAdapterPlate11	PstI	Stonefly1_Diuris1_2	SN1117R_0088_NAitken_RSB_GBS	Stonefly_1_Diuris_1_2_NoIndex_L006_R1_001.fastq.gz	22/08/2014		05/10/2014	Stonefly			
+LValpinaPlate1	PstI_varA	PstI	Sample_Alpine_Tree_Frog	SN7001117R_0088_SBanks_RSB_GBS	Alpine_Tree_Frog_NoIndex_L008_R1_001.fastq.gz			05/10/2014	lva_rpt			
+LValpinaPlate2	PstI_varB	PstI	Sample_Alpine_Tree_Frog	SN7001117R_0088_SBanks_RSB_GBS	Alpine_Tree_Frog_NoIndex_L008_R1_001.fastq.gz			05/10/2014	lva_rpt			
+LValpinaPlate3	PstI_varD	PstI	Sample_Alpine_Tree_Frog	SN7001117R_0088_SBanks_RSB_GBS	Alpine_Tree_Frog_NoIndex_L008_R1_001.fastq.gz			05/10/2014	lva_rpt			
+LValpinaPlate4	PstI_varF	PstI	Sample_Alpine_Tree_Frog	SN7001117R_0088_SBanks_RSB_GBS	Alpine_Tree_Frog_NoIndex_L008_R1_001.fastq.gz			05/10/2014	lva_rpt			
+LValpinaPlate5	PstI_varG	PstI	Sample_Alpine_Tree_Frog	SN7001117R_0088_SBanks_RSB_GBS	Alpine_Tree_Frog_NoIndex_L008_R1_001.fastq.gz			05/10/2014	lva_rpt			
+			Sample_KCure_plate_1	SN7001117R_0088_KCure_UWA_GBS	KCure_plate_1_NoIndex_L003_R1_001.fastq.gz			05/10/2014	?			
+			Sample_KCure_plate_2	SN7001117R_0088_KCure_UWA_GBS	KCure_plate_2_NoIndex_L005_R1_001.fastq.gz			05/10/2014	?			
+Pscabrum_SAf2012_Plate1	PstIAdapterPlate1	PstI	Pscabrum_SAf2012_1-4			05/11/2014			Pscabrum_SAf2012			
+Pscabrum_SAf2012_Plate2	PstIAdapterPlate2	PstI	Pscabrum_SAf2012_1-4			05/11/2014			Pscabrum_SAf2012			
+Pscabrum_SAf2012_Plate3	PstIAdapterPlate3	PstI	Pscabrum_SAf2012_1-4			05/11/2014			Pscabrum_SAf2012			
+Pscabrum_SAf2012_Plate4	PstIAdapterPlate4	PstI	Pscabrum_SAf2012_1-4			05/11/2014			Pscabrum_SAf2012			
+Arabidopsis_Expt36_plate1	PstIAdapterPlate7	PstI	Tepsuda_Expt36_1-3			05/11/2014			Arabidopsis_Expt36			
+Arabidopsis_Expt36_plate2	PstIAdapterPlate8	PstI	Tepsuda_Expt36_1-3			05/11/2014			Arabidopsis_Expt36			
+Arabidopsis_Expt36_plate3	PstIAdapterPlate9	PstI	Tepsuda_Expt36_1-3			05/11/2014			Arabidopsis_Expt36			
+GBS_Orchid_plate1	PstIAdapterPlate9	PstI	GBS_Orchid_plate1			05/11/2014			Orchids			
+BrachypodiumPlate11	PstIAdapterPlate1	PstI	Brachypodium_11-14			25/11/2014			Brachypodium			
+BrachypodiumPlate12	PstIAdapterPlate2	PstI	Brachypodium_11-14			25/11/2014			Brachypodium			
+BrachypodiumPlate13	PstIAdapterPlate3	PstI	Brachypodium_11-14			25/11/2014			Brachypodium			
+BrachypodiumPlate14	PstIAdapterPlate4	PstI	Brachypodium_11-14			25/11/2014			Brachypodium			
+Pscabrum_SAf2012_Plate5	PstIAdapterPlate5	PstI	Pscabrum_SAf2012_5-8			25/11/2014			Pscabrum_SAf2012			
+Pscabrum_SAf2012_Plate6	PstIAdapterPlate6	PstI	Pscabrum_SAf2012_5-8			25/11/2014			Pscabrum_SAf2012			
+Pscabrum_SAf2012_Plate7	PstIAdapterPlate7	PstI	Pscabrum_SAf2012_5-8			25/11/2014			Pscabrum_SAf2012			
+Pscabrum_SAf2012_Plate8	PstIAdapterPlate8	PstI	Pscabrum_SAf2012_5-8			25/11/2014			Pscabrum_SAf2012			
+Diuris_Plate1	CCGGPlate4	HpaII	Diuris_Hpa1_2_Brachy16_17			10/12/2014			Diuris_Hpa			
+Diuris_Plate2	CCGGPlate5	HpaII	Diuris_Hpa1_2_Brachy16_17			10/12/2014			Diuris_Hpa			
+BrachypodiumPlate16	PstIAdapterPlate6	PstI	Diuris_Hpa1_2_Brachy16_17			10/12/2014			Brachypodium			
+BrachypodiumPlate17	PstIAdapterPlate7	PstI	Diuris_Hpa1_2_Brachy16_17			10/12/2014			Brachypodium			
+Cleome_1rpt	PstIAdapterPlate5	PstI	Cleome_1-4			23/01/2015			Cleome			
+Cleome_2	PstIAdapterPlate6	PstI	Cleome_1-4			23/01/2015			Cleome			
+Cleome_3	PstIAdapterPlate7	PstI	Cleome_1-4			23/01/2015			Cleome			
+Cleome_4	PstIAdapterPlate8	PstI	Cleome_1-4			23/01/2015			Cleome			
+Calo_1	PstIAdapterPlate9	PstI	Calothamnus_1-4			23/01/2015			Calothamnus			
+Calo_2	PstIAdapterPlate10	PstI	Calothamnus_1-4			23/01/2015			Calothamnus			
+Calo_3	PstIAdapterPlate11	PstI	Calothamnus_1-4			23/01/2015			Calothamnus			
+Calo_4	PstIAdapterPlate12	PstI	Calothamnus_1-4			23/01/2015			Calothamnus			
+BrachypodiumPlate15	PstIAdapterPlate5	PstI	Brachypodium_15-20			09/02/2015			Brachypodium			
+BrachypodiumPlate18	PstIAdapterPlate8	PstI	Brachypodium_15-20			09/02/2015			Brachypodium			
+BrachypodiumPlate19	PstIAdapterPlate9	PstI	Brachypodium_15-20			09/02/2015			Brachypodium			
+BrachypodiumPlate20	PstIAdapterPlate10	PstI	Brachypodium_15-20			09/02/2015			Brachypodium			
+Emelliodora_LB_Block1	PstIAdapterPlate5	PstI	Emeliodora_Blk1-4	SN7001117R_0098_RSB_NAitken_GBS	Emeliodora_Blk1_4_NoIndex_L008_R1_001.fastq.gz	02/04/2015			Emelliodora			
+Emelliodora_LB_Block2	PstIAdapterPlate6	PstI	Emelliodora_Blk1-4	SN7001117R_0098_RSB_NAitken_GBS	Emeliodora_Blk1_4_NoIndex_L008_R1_001.fastq.gz	02/04/2015			Emelliodora			
+Emelliodora_LB_Block3	PstIAdapterPlate7	PstI	Emelliodora_Blk1-4	SN7001117R_0098_RSB_NAitken_GBS	Emeliodora_Blk1_4_NoIndex_L008_R1_001.fastq.gz	02/04/2015			Emelliodora			
+Emelliodora_LB_Block4	PstIAdapterPlate8	PstI	Emelliodora_Blk1-4	SN7001117R_0098_RSB_NAitken_GBS	Emeliodora_Blk1_4_NoIndex_L008_R1_001.fastq.gz	02/04/2015			Emelliodora			
+BrachypodiumPlate5_PstI	PstIAdapterPlate5	PstI	Emarg345_Brachy5	SN7001117R_0099_RSB_NAitken_Eucalyptus_marginata_Brachypodium_GBS	Emarginata345_Brachy5_NoIndex_L005_R1_001.fastq.gz	01/05/2015			Brachypodium			
+BrachypodiumPlate5_PstI	PstIAdapterPlate6	PstI	Emarg345_Brachy5	SN7001117R_0099_RSB_NAitken_Eucalyptus_marginata_Brachypodium_GBS	Emarginata345_Brachy5_NoIndex_L005_R1_001.fastq.gz	01/05/2015			Brachypodium			
+Emarginata_plate3_2014	PstIAdapterPlate3	PstI	Emarg345_Brachy5	SN7001117R_0099_RSB_NAitken_Eucalyptus_marginata_Brachypodium_GBS	Emarginata345_Brachy5_NoIndex_L005_R1_001.fastq.gz	01/05/2015			Emarginata			
+Emarginata_plate4_2014	PstIAdapterPlate4	PstI	Emarg345_Brachy5	SN7001117R_0099_RSB_NAitken_Eucalyptus_marginata_Brachypodium_GBS	Emarginata345_Brachy5_NoIndex_L005_R1_001.fastq.gz	01/05/2015			Emarginata			
+Emarginata_plate5_2014	PstIAdapterPlate10	PstI	Emarg345_Brachy5	SN7001117R_0099_RSB_NAitken_Eucalyptus_marginata_Brachypodium_GBS	Emarginata345_Brachy5_NoIndex_L005_R1_001.fastq.gz	01/05/2015			Emarginata			
+Emelliodora_Plate5_2015	Pst1AdapterPlate1	Pst1	TriciaCopas_Emel_4platesMarch2015	SN7001117R_0099_RSB_TCopias_Eucalyptus_meliodora_GBS	Emel_Tricia_5_6_9_10_GBS_NoIndex_L006_R1_001.fastq.gz	01/03/2015			Emelliodora			
+Emelliodora_Plate6_2015	Pst1AdapterPlate2	Pst1	TriciaCopas_Emel_4platesMarch2015	SN7001117R_0099_RSB_TCopias_Eucalyptus_meliodora_GBS	Emel_Tricia_5_6_9_10_GBS_NoIndex_L006_R1_001.fastq.gz	01/03/2015			Emelliodora			
+Emelliodora_Plate9_2015	Pst1AdapterPlate9	Pst1	TriciaCopas_Emel_4platesMarch2015	SN7001117R_0099_RSB_TCopias_Eucalyptus_meliodora_GBS	Emel_Tricia_5_6_9_10_GBS_NoIndex_L006_R1_001.fastq.gz	01/03/2015			Emelliodora			
+Emelliodora_Plate10_2016	Pst1AdapterPlate10	Pst1	TriciaCopas_Emel_4platesMarch2015	SN7001117R_0099_RSB_TCopias_Eucalyptus_meliodora_GBS	Emel_Tricia_5_6_9_10_GBS_NoIndex_L006_R1_001.fastq.gz	01/03/2015			Emelliodora			
+BrachypodiumPlate27	PstIAdapterPlate7	PstI	Brachypodium_27-32			15/06/2015			Brachypodium			NextSeq500 
+BrachypodiumPlate28	PstIAdapterPlate8	PstI	Brachypodium_27-32			15/06/2015			Brachypodium			NextSeq500 
+BrachypodiumPlate29	PstIAdapterPlate9	PstI	Brachypodium_27-32			15/06/2015			Brachypodium			NextSeq500 
+BrachypodiumPlate30	PstIAdapterPlate10	PstI	Brachypodium_27-32			15/06/2015			Brachypodium			NextSeq500 
+BrachypodiumPlate31	PstIAdapterPlate11	PstI	Brachypodium_27-32			15/06/2015			Brachypodium			NextSeq500 
+BrachypodiumPlate32	PstIAdapterPlate12	PstI	Brachypodium_27-32			15/06/2015			Brachypodium			NextSeq500 
+Ecamaldulensis_plate1	PstIAdapterPlate1	PstI	Ecamaldulensis1-4			21/07/2015			Ecamaldulensis			HiSeq2000
+Ecamaldulensis_plate2	PstIAdapterPlate2	PstI	Ecamaldulensis1-4			21/07/2015			Ecamaldulensis			HiSeq2000
+Ecamaldulensis_plate3	PstIAdapterPlate3	PstI	Ecamaldulensis1-4			21/07/2015			Ecamaldulensis			HiSeq2000
+Ecamaldulensis_plate4	PstIAdapterPlate4	PstI	Ecamaldulensis1-4			21/07/2015			Ecamaldulensis			HiSeq2000
+Emelliodora_LB_Block09	PstIAdapterPlate9	PstI	Emeliodora_Blk9-14			18/08/2015			Emelliodora			NextSeq500 
+Emelliodora_LB_Block10	PstIAdapterPlate10	PstI	Emeliodora_Blk9-14			18/08/2015			Emelliodora			NextSeq500 
+Emelliodora_LB_Block11	Pst1AdapterPlate1	PstI	Emeliodora_Blk9-14			18/08/2015			Emelliodora			NextSeq500 
+Emelliodora_LB_Block12	PstIAdapterPlate12	PstI	Emeliodora_Blk9-14			18/08/2015			Emelliodora			NextSeq500 
+Emelliodora_LB_Block13	Pst1AdapterPlate2	PstI	Emeliodora_Blk9-14			18/08/2015			Emelliodora			NextSeq500 
+Emelliodora_LB_Block14	Pst1AdapterPlate4	PstI	Emeliodora_Blk9-14			18/08/2015			Emelliodora			NextSeq500 
+Ecoolabah_Gillen_Plate1	PstIAdapterPlate1	PstI	Ecool1_Them2-7			10/12/2015			Ecoolabah			NextSeq500
+Themeda2015_02	PstIAdapterPlate2	PstI	Ecool1_Them2-7			10/12/2015			Themeda			NextSeq500
+Themeda2015_03	PstIAdapterPlate3	PstI	Ecool1_Them2-7			10/12/2015			Themeda			NextSeq500
+Themeda2015_04	PstIAdapterPlate4	PstI	Ecool1_Them2-7			10/12/2015			Themeda			NextSeq500
+Themeda2015_05	PstIAdapterPlate5	PstI	Ecool1_Them2-7			10/12/2015			Themeda			NextSeq500
+Themeda2015_06	PstIAdapterPlate6	PstI	Ecool1_Them2-7			10/12/2015			Themeda			NextSeq500
+Themeda2015_07	PstIAdapterPlate7	PstI	Ecool1_Them2-7			10/12/2015			Themeda			NextSeq500

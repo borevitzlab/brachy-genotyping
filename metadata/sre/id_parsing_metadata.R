@@ -30,7 +30,7 @@ f4$Axefile='brachy_04.axe'
 
 f5=read.table('brachy_05.axe',head=F)
 names(f5)[1:3]=c('Barcode1','Barcode2','ID')
-f5$Plate=c(rep('BR05',96),rep('BRX5',96))
+f5$Plate=c(rep('BR05',96),rep('BR05-XT',96))
 f5$Well=rep(paste(rep(c('A','B','C','D','E','F','G','H'),each=12),rep(c('01','02','03','04','05','06','07','08','09','10','11','12'),8),sep=''),2)
 f5$Axefile='brachy_05.axe'
 
