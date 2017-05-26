@@ -60,29 +60,9 @@ def parse_plates(filename):
             yield plate_name, plate
 
 
-def parse_barcode_plate(platefile):
-    barcode_plates = {}
-    for plate_name, plate in parse_plates(platefile):
-        is_combo = False
-
-        for row in ROWS:
-            for col in COLS:
-                bcds = plate[row][col].split(' / ')
-                if len(bcds) == 2:
-                    is_combo = True
-                plate[row][col] = bcds
-        barcode_plates[plate_name] = {
-            'barcodes': plate,
-            'is_combo': is_combo,
-        }
-    return barcode_plates
-
-
 def main():
     from argparse import ArgumentParser
     ap = ArgumentParser("smp2csv", description="Convert 96well plate to csv")
-    ap.add_argument("-b", "--barcodes", required=True, type=str,
-                    help="Barcode map file")
     ap.add_argument("plates", type=str, nargs='+',
                     help="Plate file(s)")
     args = ap.parse_args()
