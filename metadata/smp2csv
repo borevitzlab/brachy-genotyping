@@ -1,14 +1,16 @@
-from __future__ import print_function
+#!/usr/bin/env python3
 import datetime
 import os
 import re
+import csv
+from sys import stdout, stderr
 
 
 COLS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 ROWS = ["A", "B", "C", "D", "E", "F", "G", "H"]
 
 
-def iter_plates(filename):
+def parse_plates(filename):
     '''Parse plate file in 96 well plate format, yielding name, cells:
 
     ('plate1', {'A': {1: 'a1', ...}, ...}
@@ -40,28 +42,27 @@ def iter_plates(filename):
             plate_name = cells[0]
             try:
                 numerics = list(map(int, cells[1:]))
-                assert(numerics == [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])
+                assert(numerics == COLS)
             except (ValueError, AssertionError):
                 raise ValueError("Bad plate header: ", line)
 
             # Parse each row into plate dict
-            for alpha in "ABCDEFGH":
+            for alpha in ROWS:
                 line = fh.readline()
                 cells = parse_cells(line)
                 row = cells[0].upper()
                 if row != alpha:
                     raise ValueError("Bad plate line, row label is incorrect:",
                                      line)
-                plate[row] = {}
-                for num in range(1, 13):
-                    plate[row][num] = cells[num]
+                for num in COLS:
+                    coord = "{}{:02d}".format(row, num)
+                    plate[coord] = cells[num]
             yield plate_name, plate
 
 
 def parse_barcode_plate(platefile):
     barcode_plates = {}
-    for plate_name, plate in iter_plates(platefile):
-        barcodes = {}
+    for plate_name, plate in parse_plates(platefile):
         is_combo = False
 
         for row in ROWS:
@@ -77,37 +78,21 @@ def parse_barcode_plate(platefile):
     return barcode_plates
 
 
-def sanitise_name(name):
-    # make 'empty' and 'blank' actually empty
-    for empty in ['empty', 'blank']:
-        if name.lower().startswith(empty):
-            return ''
+def main():
+    from argparse import ArgumentParser
+    ap = ArgumentParser("smp2csv", description="Convert 96well plate to csv")
+    ap.add_argument("-b", "--barcodes", required=True, type=str,
+                    help="Barcode map file")
+    ap.add_argument("plates", type=str, nargs='+',
+                    help="Plate file(s)")
+    args = ap.parse_args()
 
-    # Remove chars that are bad file names
-    badchars = '/\\~`!@#$%^&*()+=<>,.?;:\'"'
-    transtable = {c: '-' for c in badchars}
-    name = name.translate(transtable)
+    csvw = csv.writer(stdout, dialect="unix")
+    csvw.writerow(["plate.name", "well", "value"])
+    for platefile in args.plates:
+        for platename, plate in parse_plates(platefile):
+            for coord, value in sorted(plate.items()):
+                csvw.writerow([platename, coord, value])
 
-    # the above can result in multiple '-'s so we reduce them to just 1
-    return re.sub('-+', '-', name)
-
-
-def make_axe(samplefile, barcodefile, outputfile):
-    bcdplates = parse_barcode_plate(barcodefile)
-    today = datetime.date.today().isoformat()
-    is_combo = None
-    with open(outputfile, 'w') as ofh:
-        print('# Generated', today, file=ofh)
-        print('# From', os.path.basename(samplefile), file=ofh)
-        print('#', file=ofh)
-        for pname, plate in iter_plates(samplefile):
-            print('# Start of', pname, file=ofh)
-            bcd = bcdplates[pname]
-            for row in ROWS:
-                for col in COLS:
-                    # For single barcode runs, the len(barcodes) is 1 so there
-                    # is no tab added.
-                    bcdstr = '\t'.join(bcd["barcodes"][row][col])
-                    name = sanitise_name(plate[row][col])
-                    if name:
-                        print(bcdstr, name, sep='\t', file=ofh)
+if __name__ == "__main__":
+    main()
