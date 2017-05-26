@@ -1,0 +1,21 @@
+lanes:
+  brachy_01:
+    combo: false
+  brachy_02:
+    combo: false
+  brachy_03:
+    combo: false
+  brachy_04:
+    combo: false
+  brachy_05:
+    combo: true
+  brachy_06:
+    combo: false
+  brachy_09-10:
+    combo: true
+  brachy_11-14:
+    combo: true
+  brachy_15-20:
+    combo: true
+  brachy_27-32:
+    combo: true
