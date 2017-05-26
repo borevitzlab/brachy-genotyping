@@ -1,0 +1,24 @@
+"sample.plate.name","barcode.plate.name","lane","sequencer.chemistry"
+"BrachypodiumPlate1","PstI_common","brachy_01",
+"BrachypodiumPlate2","PstI_common","brachy_02",
+"BrachypodiumPlate3","PstI_common","brachy_03",
+"BrachypodiumPlate4","PstI_common","brachy_04",
+"BrachypodiumPlate6","PstI_common","brachy_06",
+"BrachypodiumPlate9","PstIAdapterPlate9","brachy_09-10",
+"BrachypodiumPlate10","PstIAdapterPlate10","brachy_09-10",
+"BrachypodiumPlate11","PstIAdapterPlate1","brachy_11-14",
+"BrachypodiumPlate12","PstIAdapterPlate2","brachy_11-14",
+"BrachypodiumPlate13","PstIAdapterPlate3","brachy_11-14",
+"BrachypodiumPlate14","PstIAdapterPlate4","brachy_11-14",
+"BrachypodiumPlate15","PstIAdapterPlate5","brachy_15-20",
+"BrachypodiumPlate18","PstIAdapterPlate8","brachy_15-20",
+"BrachypodiumPlate19","PstIAdapterPlate9","brachy_15-20",
+"BrachypodiumPlate20","PstIAdapterPlate10","brachy_15-20",
+"BrachypodiumPlate5_PstI","PstIAdapterPlate5","brachy_05",
+"BrachypodiumPlate5_PstI_XT","PstIAdapterPlate6","brachy_05",
+"BrachypodiumPlate27","PstIAdapterPlate7","brachy_27-32","NextSeq500 "
+"BrachypodiumPlate28","PstIAdapterPlate8","brachy_27-32","NextSeq500 "
+"BrachypodiumPlate29","PstIAdapterPlate9","brachy_27-32","NextSeq500 "
+"BrachypodiumPlate30","PstIAdapterPlate10","brachy_27-32","NextSeq500 "
+"BrachypodiumPlate31","PstIAdapterPlate11","brachy_27-32","NextSeq500 "
+"BrachypodiumPlate32","PstIAdapterPlate12","brachy_27-32","NextSeq500 "

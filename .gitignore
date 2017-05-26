@@ -3,3 +3,4 @@ data/
 rawdata/
 sandbox/
 .*.sw?
+.R*
