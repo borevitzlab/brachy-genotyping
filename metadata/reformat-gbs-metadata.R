@@ -42,3 +42,5 @@ t = brachy %>%
     select(lane, anon.name, R1Barcode, R2Barcode) %>%
     group_by(lane) %>%
     do(writeaxe(.))
+
+write.csv(brachy, "brachy-metadata.csv", row.names=F)
