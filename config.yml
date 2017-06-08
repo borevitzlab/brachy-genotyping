@@ -1,6 +1,28 @@
 qc:
-  adapter1: GATCGGAAGAGCGGTTCAGCAGGAATGCCGAGACCGATCTCGTATGCCGTCTTCTGCTTG
+  adapter1: AGATCGGAAGAGCGGTTCAGCAGGAATGCCGAGACCGATCTCGTATGCCGTCTTCTGCTTG
   adapter2: AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT
+
+mapping:
+  aligners:
+    - ngm
+      #    - bwa
+  refs:
+    - bdisv3
+
+refs:
+  bdisv3: rawdata/references/Bdis_v3/Bdistachyon_314_v3.0.fa
+
+varcall:
+  chunksize: 1000000
+  aligners:
+    - ngm
+  # - bwa
+  callers:
+  #  - freebayes
+    - mpileup
+  refs:
+    - bdisv3
+  
 
 lanes:
   brachy_01:
