@@ -11,7 +11,7 @@ REGIONS = snkmk.make_regions(config["refs"], window=config["varcall"]["chunksize
 
 rule all:
     input:
-        #expand("data/reads/qc/{lane}/{sample}.fastq.gz", sample=SAMP2LANE),
+        expand("data/reads/qc/{sample}.fastq.gz", sample=SAMP2LANE),
         expand("data/alignments/{aligner}/{ref}/{sample}.bam",
                ref=config["mapping"]["refs"],
                aligner=config["mapping"]["aligners"],
@@ -19,19 +19,24 @@ rule all:
         expand("data/alignments/{aligner}/{ref}.bam",
                aligner=config["mapping"]["aligners"],
                ref=config["mapping"]["refs"]),
-#        expand("data/variants/{caller}/{aligner}/{ref}.bcf",
-#               caller=config["varcall"]["callers"],
-#               aligner=config["varcall"]["aligners"],
-#               ref=config["varcall"]["refs"]),
+        expand("data/variants/{caller}/{aligner}/{ref}.bcf",
+               caller=config["varcall"]["callers"],
+               aligner=config["varcall"]["aligners"],
+               ref=config["varcall"]["refs"]),
+
+rule qc:
+    input:
+        expand("data/reads/qc/{sample}.fastq.gz", sample=SAMP2LANE)
 
 rule qcreads:
     input:
-        reads="data/reads/raw/{lane}/{sample}_il.fastq"
+        reads=lambda wc: "data/reads/raw/{lane}/{sample}_il.fastq".format(
+                                lane=SAMP2LANE[wc.sample], sample=wc.sample),
     output:
-        reads="data/reads/qc/{lane}/{sample}.fastq.gz",
-        settings="data/stats/adapterremoval/{lane}/{sample}_settings.txt",
+        reads="data/reads/qc/{sample}.fastq.gz",
+        settings="data/stats/adapterremoval/{sample}_settings.txt",
     log:
-        "data/log/adapterremoval/{lane}/{sample}.log",
+        "data/log/adapterremoval/{sample}.log",
     threads:
         4
     params:
@@ -83,23 +88,22 @@ rule ar_id_adaptors:
 rule map:
     input:
         expand("data/alignments/{aligner}/{ref}/{sample}.bam",
-               ref=config["mapping"]["refs"],
                aligner=config["mapping"]["aligners"],
+               ref=config["mapping"]["refs"],
                sample=SAMP2LANE),
-        expand("data/alignments/{aligner}/{ref}.bam",
+        expand("data/alignments/{aligner}/{ref}_merged.bam",
                aligner=config["mapping"]["aligners"],
                ref=config["mapping"]["refs"]),
 
 rule ngmap:
     input:
-        reads=lambda wc: "data/reads/qc/{lane}/{sample}.fastq.gz".format(
-                                lane=SAMP2LANE[wc.sample], sample=wc.sample),
+        reads="data/reads/qc/{sample}.fastq.gz",
         ref=lambda wc: config['refs'][wc.ref]
     output:
         bam="data/alignments/ngm/{ref}/{sample}.bam",
         bai="data/alignments/ngm/{ref}/{sample}.bam.bai",
     log:
-        "data/log/ngm/{ref}_{sample}.log"
+        "data/log/ngm/{ref}/{sample}.log"
     threads:
         8
     shell:
@@ -123,8 +127,7 @@ rule ngmap:
 
 rule bwamem:
     input:
-        reads=lambda wc: "data/reads/qc/{lane}/{sample}.fastq.gz".format(
-                                lane=SAMP2LANE[wc.sample], sample=wc.sample),
+        reads="data/reads/qc/{sample}.fastq.gz",
         ref=lambda wc: config['refs'][wc.ref]
     output:
         bam="data/alignments/bwa/{ref}/{sample}.bam",
@@ -154,10 +157,10 @@ rule mergebam:
     input:
         expand("data/alignments/{{aligner}}/{{ref}}/{sample}.bam", sample=SAMP2LANE),
     output:
-        bam="data/alignments/{aligner}/{ref}.bam",
-        bai="data/alignments/{aligner}/{ref}.bam.bai",
+        bam="data/alignments/{aligner}/{ref}_merged.bam",
+        bai="data/alignments/{aligner}/{ref}_merged.bam.bai",
     log:
-        "data/log/mergebam/{ref}.log"
+        "data/log/mergebam/{aligner}/{ref}.log"
     threads: 3
     shell:
         "( samtools merge"
@@ -179,8 +182,8 @@ rule varcall:
 
 rule freebayes:
     input:
-        bam="data/alignments/{aligner}/{ref}.bam",
-        bai="data/alignments/{aligner}/{ref}.bam.bai",
+        bam="data/alignments/{aligner}/{ref}_merged.bam",
+        bai="data/alignments/{aligner}/{ref}_merged.bam.bai",
         ref=lambda wc: config['refs'][wc.ref],
     output:
         bcf="data/variants/freebayes/{aligner}/{ref}/split/{region}.bcf",
@@ -212,8 +215,8 @@ rule freebayes:
 
 rule mpileup:
     input:
-        bam="data/alignments/{aligner}/{ref}.bam",
-        bai="data/alignments/{aligner}/{ref}.bam.bai",
+        bam="data/alignments/{aligner}/{ref}_merged.bam",
+        bai="data/alignments/{aligner}/{ref}_merged.bam.bai",
         ref=lambda wc: config['refs'][wc.ref],
     output:
         bcf="data/variants/mpileup/{aligner}/{ref}/split/{region}.bcf",
