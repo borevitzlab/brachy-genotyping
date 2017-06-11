@@ -1,3 +1,6 @@
+from collections import defaultdict
+
+
 def parsefai(fai):
     with open(fai) as fh:
         for l in fh:
@@ -54,3 +57,16 @@ def make_chroms(rdict):
         ret[refname] = ref
         print(refname, "has", len(ref), "chromosome sets")
     return ret
+
+
+def make_readcountdict(lanes):
+    readcounts = dict()
+    for lane in lanes:
+        with open("data/stats/demux/{}.tsv".format(lane)) as fh:
+            next(fh)  # skip header
+            for line in fh:
+                line = line.rstrip().split()
+                samp = line[-2]
+                rcount = int(line[-1])
+                readcounts[samp] = rcount
+    return readcounts

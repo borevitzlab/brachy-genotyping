@@ -12,8 +12,6 @@ ROWS = ["A", "B", "C", "D", "E", "F", "G", "H"]
 
 def parse_plates(filename):
     '''Parse plate file in 96 well plate format, yielding name, cells:
-
-    ('plate1', {'A': {1: 'a1', ...}, ...}
     '''
     # line string to list of cells
     parse_cells = lambda l: list(map(str.strip, l.rstrip('\r\n').split('\t')))

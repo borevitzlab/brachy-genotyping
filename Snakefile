@@ -7,16 +7,20 @@ shell.prefix("set -euo pipefail; ")
 
 SAMP2LANE = json.load(open("metadata/samp2lane.json"))
 LANE2SAMP = json.load(open("metadata/lane2samp.json"))
+READCOUNTS = snkmk.make_readcountdict(config["lanes"].keys())
 REGIONS = snkmk.make_regions(config["refs"], window=config["varcall"]["chunksize"])
+SAMPLES = [s for s, rc in READCOUNTS.items() if rc > config["minreads"]]
+
+localrules: all, qc, map, varcall, qcreads
 
 rule all:
     input:
-        expand("data/reads/qc/{sample}.fastq.gz", sample=SAMP2LANE),
+        expand("data/reads/qc/{sample}.fastq.gz", sample=SAMPLES),
         expand("data/alignments/{aligner}/{ref}/{sample}.bam",
                ref=config["mapping"]["refs"],
                aligner=config["mapping"]["aligners"],
-               sample=SAMP2LANE),
-        expand("data/alignments/{aligner}/{ref}.bam",
+               sample=SAMPLES),
+        expand("data/alignments/{aligner}/{ref}_merged.bam",
                aligner=config["mapping"]["aligners"],
                ref=config["mapping"]["refs"]),
         expand("data/variants/{caller}/{aligner}/{ref}.bcf",
@@ -26,7 +30,7 @@ rule all:
 
 rule qc:
     input:
-        expand("data/reads/qc/{sample}.fastq.gz", sample=SAMP2LANE)
+        expand("data/reads/qc/{sample}.fastq.gz", sample=SAMPLES)
 
 rule qcreads:
     input:
@@ -38,7 +42,7 @@ rule qcreads:
     log:
         "data/log/adapterremoval/{sample}.log",
     threads:
-        4
+        2
     params:
         adp1=config["qc"]["adapter1"],
         adp2=config["qc"]["adapter2"],
@@ -90,7 +94,7 @@ rule map:
         expand("data/alignments/{aligner}/{ref}/{sample}.bam",
                aligner=config["mapping"]["aligners"],
                ref=config["mapping"]["refs"],
-               sample=SAMP2LANE),
+               sample=SAMPLES),
         expand("data/alignments/{aligner}/{ref}_merged.bam",
                aligner=config["mapping"]["aligners"],
                ref=config["mapping"]["refs"]),
@@ -105,7 +109,7 @@ rule ngmap:
     log:
         "data/log/ngm/{ref}/{sample}.log"
     threads:
-        8
+        2
     shell:
         "( ngm"
         "   -q {input.reads}"
@@ -135,7 +139,7 @@ rule bwamem:
     log:
         "data/log/bwa/{ref}/{sample}.log"
     threads:
-        8
+        2
     shell:
         "( bwa mem"
         "   -p" # paired input
@@ -155,7 +159,7 @@ rule bwamem:
 
 rule mergebam:
     input:
-        expand("data/alignments/{{aligner}}/{{ref}}/{sample}.bam", sample=SAMP2LANE),
+        expand("data/alignments/{{aligner}}/{{ref}}/{sample}.bam", sample=SAMPLES),
     output:
         bam="data/alignments/{aligner}/{ref}_merged.bam",
         bai="data/alignments/{aligner}/{ref}_merged.bam.bai",
