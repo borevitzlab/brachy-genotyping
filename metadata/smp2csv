@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-import datetime
 import os
 import re
 import csv
@@ -14,7 +13,8 @@ def parse_plates(filename):
     '''Parse plate file in 96 well plate format, yielding name, cells:
     '''
     # line string to list of cells
-    parse_cells = lambda l: list(map(str.strip, l.rstrip('\r\n').split('\t')))
+    def parse_cells(l):
+        return list(map(str.strip, l.rstrip('\r\n').split('\t')))
     with open(filename) as fh:
         # This while loop can be read as "for plate in readfile"
         while True:

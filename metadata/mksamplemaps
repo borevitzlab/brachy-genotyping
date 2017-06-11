@@ -1,0 +1,21 @@
+#!/usr/bin/env python3
+import csv
+from collections import defaultdict
+import json
+
+
+samples = csv.DictReader(open("brachy-metadata.csv"))
+
+s2l = {}
+l2s = defaultdict(list)
+
+
+for sample in samples:
+    s2l[sample["anon.name"]] = sample["lane"]
+    l2s[sample["lane"]].append(sample["anon.name"])
+
+with open("samp2lane.json", "w") as fh:
+    json.dump(s2l, fh, indent=2)
+
+with open("lane2samp.json", "w") as fh:
+    json.dump(l2s, fh, indent=2)
