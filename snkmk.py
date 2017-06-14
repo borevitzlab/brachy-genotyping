@@ -65,8 +65,10 @@ def make_readcountdict(lanes):
         with open("data/stats/demux/{}.tsv".format(lane)) as fh:
             next(fh)  # skip header
             for line in fh:
-                line = line.rstrip().split()
+                line = line.rstrip().split("\t")
                 samp = line[-2]
+                if samp == "No Barcode":
+                    continue
                 rcount = int(line[-1])
                 readcounts[samp] = rcount
     return readcounts

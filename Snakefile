@@ -13,24 +13,32 @@ SAMPLES = [s for s, rc in READCOUNTS.items() if rc > config["minreads"]]
 
 localrules: all, qc, map, varcall, qcreads
 
-rule all:
+rule varcall:
     input:
-        expand("data/reads/qc/{sample}.fastq.gz", sample=SAMPLES),
+        expand("data/variants/{caller}/{aligner}/{ref}.bcf{ext}",
+               caller=config["varcall"]["callers"],
+               aligner=config["varcall"]["aligners"],
+               ref=config["varcall"]["refs"],
+               ext=["", ".csi"]), # include index files
+
+rule map:
+    input:
         expand("data/alignments/{aligner}/{ref}/{sample}.bam",
-               ref=config["mapping"]["refs"],
                aligner=config["mapping"]["aligners"],
+               ref=config["mapping"]["refs"],
                sample=SAMPLES),
         expand("data/alignments/{aligner}/{ref}_merged.bam",
                aligner=config["mapping"]["aligners"],
                ref=config["mapping"]["refs"]),
-        expand("data/variants/{caller}/{aligner}/{ref}.bcf",
-               caller=config["varcall"]["callers"],
-               aligner=config["varcall"]["aligners"],
-               ref=config["varcall"]["refs"]),
 
 rule qc:
     input:
         expand("data/reads/qc/{sample}.fastq.gz", sample=SAMPLES)
+
+rule all:
+    input:
+        rules.qc.output, rules.map.output, rules.varcall.output
+
 
 rule qcreads:
     input:
@@ -88,16 +96,6 @@ rule ar_id_adaptors:
         "   --identify-adapters"
         "   --threads {threads}"
         " >{output.idlog} 2>{log}"
-
-rule map:
-    input:
-        expand("data/alignments/{aligner}/{ref}/{sample}.bam",
-               aligner=config["mapping"]["aligners"],
-               ref=config["mapping"]["refs"],
-               sample=SAMPLES),
-        expand("data/alignments/{aligner}/{ref}_merged.bam",
-               aligner=config["mapping"]["aligners"],
-               ref=config["mapping"]["refs"]),
 
 rule ngmap:
     input:
@@ -176,14 +174,6 @@ rule mergebam:
 
 
 
-rule varcall:
-    input:
-        expand("data/variants/{caller}/{aligner}/{ref}.bcf",
-               caller=config["varcall"]["callers"],
-               aligner=config["varcall"]["aligners"],
-               ref=config["varcall"]["refs"]),
-
-
 rule freebayes:
     input:
         bam="data/alignments/{aligner}/{ref}_merged.bam",
@@ -258,6 +248,7 @@ rule bcfmerge:
                               region=sorted(REGIONS[wc.ref])),
     output:
         bcf="data/variants/{caller}/{aligner}/{ref}.bcf",
+        idx="data/variants/{caller}/{aligner}/{ref}.bcf.csi",
     log:
         "data/log/merge/{caller}/{aligner}/{ref}.log"
     threads: 2
@@ -269,4 +260,5 @@ rule bcfmerge:
         "   -O b"
         "   -o {output.bcf}"
         "   {input.bcf}"
+        " && bcftools index -f {output.bcf}"
         " ) >{log} 2>&1"

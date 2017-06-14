@@ -4,7 +4,7 @@
 #PBS -l ncpus=16
 #PBS -l walltime=24:00:00
 #PBS -l other=gdata1
-#PBS -l mem=31G
+#PBS -l mem=63G
 #PBS -l jobfs=100G
 #PBS -l wd
 
@@ -16,5 +16,6 @@ snakemake                        \
     -j 16                        \
     --rerun-incomplete           \
     --keep-going                 \
+    all                          \
     >data/log/snakemake.log 2>&1 \
 

@@ -35,8 +35,8 @@ lanes:
     combo: false
   brachy_04:
     combo: false
-  brachy_05:
-    combo: true
+#  brachy_05:
+#    combo: true
   brachy_06:
     combo: false
   brachy_09-10:
