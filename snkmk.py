@@ -1,4 +1,6 @@
+from __future__ import print_statement
 from collections import defaultdict
+import csv
 
 
 def parsefai(fai):
@@ -72,3 +74,13 @@ def make_readcountdict(lanes):
                 rcount = int(line[-1])
                 readcounts[samp] = rcount
     return readcounts
+
+
+def s2l2s(metadatafile):
+    samples = csv.DictReader(open(metadatafile))
+    s2l = {}
+    l2s = defaultdict(list)
+    for sample in samples:
+        s2l[sample["anon.name"]] = sample["lane"]
+        l2s[sample["lane"]].append(sample["anon.name"])
+    return s2l, l2s

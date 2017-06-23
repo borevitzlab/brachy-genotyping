@@ -17,10 +17,12 @@ mergebam:
   time: '4:00:00'
 
 freebayes:
-  time: '36:00:00'
+  time: '6:00:00'
+  mem: 15G
 
 mpileup:
   time: '3:00:00'
+  mem: 1800M
 
 bcfmerge:
   time: '3:00:00'

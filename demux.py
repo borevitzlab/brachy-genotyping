@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+from __future__ import print_function
 import yaml
 import subprocess as sp
 from multiprocessing.pool import ThreadPool
@@ -54,7 +55,13 @@ def main():
     lanes = parse_cfg()
     if len(argv) > 1:
         # Filter on whitelist of plates
-        lanes = {k: v for k, v in lanes.items() if k in argv[1:]}
+        l2 = {}
+        for k, v in lanes.items():
+            if k in argv[1:]:
+                l2[k] = v
+            else:
+                print("Skipping", k, "as it is not in ARGV", file=stderr)
+        lanes = l2
 
     pool = ThreadPool(16)
     rets = pool.map(runaxe, lanes)

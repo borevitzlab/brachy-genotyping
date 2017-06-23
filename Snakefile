@@ -35,10 +35,6 @@ rule qc:
     input:
         expand("data/reads/qc/{sample}.fastq.gz", sample=SAMPLES)
 
-rule all:
-    input:
-        rules.qc.output, rules.map.output, rules.varcall.output
-
 
 rule qcreads:
     input:

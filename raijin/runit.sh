@@ -16,6 +16,6 @@ snakemake                        \
     -j 16                        \
     --rerun-incomplete           \
     --keep-going                 \
-    all                          \
+    varcall                      \
     >data/log/snakemake.log 2>&1 \
 
