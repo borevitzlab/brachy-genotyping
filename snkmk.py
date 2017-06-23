@@ -1,4 +1,4 @@
-from __future__ import print_statement
+from __future__ import print_function
 from collections import defaultdict
 import csv
 
@@ -64,15 +64,18 @@ def make_chroms(rdict):
 def make_readcountdict(lanes):
     readcounts = dict()
     for lane in lanes:
-        with open("data/stats/demux/{}.tsv".format(lane)) as fh:
-            next(fh)  # skip header
-            for line in fh:
-                line = line.rstrip().split("\t")
-                samp = line[-2]
-                if samp == "No Barcode":
-                    continue
-                rcount = int(line[-1])
-                readcounts[samp] = rcount
+        try:
+            with open("data/stats/demux/{}.tsv".format(lane)) as fh:
+                next(fh)  # skip header
+                for line in fh:
+                    line = line.rstrip().split("\t")
+                    samp = line[-2]
+                    if samp == "No Barcode":
+                        continue
+                    rcount = int(line[-1])
+                    readcounts[samp] = rcount
+        except FileNotFoundError as exc:
+            pass
     return readcounts
 
 

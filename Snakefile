@@ -5,8 +5,7 @@ configfile: "config.yml"
 shell.executable("/bin/bash")
 shell.prefix("set -euo pipefail; ")
 
-SAMP2LANE = json.load(open("metadata/samp2lane.json"))
-LANE2SAMP = json.load(open("metadata/lane2samp.json"))
+SAMP2LANE, LANE2SAMP = snkmk.s2l2s("metadata/brachy-metadata.csv")
 READCOUNTS = snkmk.make_readcountdict(config["lanes"].keys())
 REGIONS = snkmk.make_regions(config["refs"], window=config["varcall"]["chunksize"])
 SAMPLES = [s for s, rc in READCOUNTS.items() if rc > config["minreads"]]

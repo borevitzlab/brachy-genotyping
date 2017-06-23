@@ -20,11 +20,11 @@ varcall:
     - ngm
     - bwa
   callers:
-    - freebayes
+    #- freebayes
     - mpileup
   refs:
     - bdisv3
-  
+
 
 lanes:
   brachy_01:
