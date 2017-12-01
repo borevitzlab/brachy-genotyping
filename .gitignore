@@ -5,3 +5,4 @@ sandbox/
 .*.sw?
 .R*
 *.[eo][0123456789]*
+.Rproj.user
