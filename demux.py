@@ -17,17 +17,18 @@ def parse_cfg():
 def runaxe(lane):
     lanedata = parse_cfg()[lane]
     keyfile = "metadata/keyfiles/" + lane + ".axe"
-    statsfile = "data/stats/demux/" + lane + ".tsv"
     r1fq = "rawdata/gbs/" + lane + "/" + lane + "_R1.fastq.gz"
     r2fq = "rawdata/gbs/" + lane + "/" + lane + "_R2.fastq.gz"
-    outprefix = "data/reads/raw/" + lane + "/"
-    logfile = "data/log/demux/" + lane + ".log"
+    outprefix = "rawdata/gbs_demux/reads/" + lane + "/"
+    statsfile = "rawdata/gbs_demux/stats/" + lane + ".tsv"
+    logfile =   "rawdata/gbs_demux/log/" + lane + ".log"
 
-    os.makedirs("data/stats/demux", exist_ok=True)
-    os.makedirs("data/log/demux", exist_ok=True)
-    os.makedirs(outprefix.rstrip("/"), exist_ok=True)
+    os.makedirs("rawdata/gbs_demux/reads/", exist_ok=True)
+    os.makedirs("rawdata/gbs_demux/stats/", exist_ok=True)
+    os.makedirs("rawdata/gbs_demux/log/", exist_ok=True)
 
     cmd = ["axe-demux",
+           "-z", "6",
            "-m", "0",
            "-t", statsfile,
            "-b", keyfile,

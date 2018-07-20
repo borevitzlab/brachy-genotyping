@@ -1,6 +1,12 @@
 from __future__ import print_function
 from collections import defaultdict
 import csv
+from glob import glob
+from os.path import (
+    basename,
+    dirname,
+    splitext,
+)
 
 
 def parsefai(fai):
@@ -11,7 +17,7 @@ def parsefai(fai):
             yield cname, clen
 
 
-def make_regions(rdict, window=1e6):
+def make_regions(rdict, window=1e6, base=1):
     window = int(window)
     ret = {}
     for refname, refpath in rdict.items():
@@ -20,27 +26,10 @@ def make_regions(rdict, window=1e6):
         curwin = []
         curwinlen = 0
         for cname, clen in parsefai(fai):
-            if clen < window:
-                curwinlen += clen
-                reg = "{}:1-{}".format(cname, clen)
-                curwin.append(reg)
-                if curwinlen > window:
-                    windows.append(curwin)
-                    curwin = []
-                    curwinlen = 0
-            else:
-                for start in range(0, clen, window):
-                    wlen = min(clen - start, window)
-                    windows.append(["{}:{}-{}".format(cname, start, start+wlen)])
-        if len(curwin) > 0:
-            windows.append(curwin)
-
-        ref = dict()
-        for i, w in enumerate(windows):
-            wname = "W{:05d}".format(i)
-            ref[wname] = w
-        ret[refname] = ref
-        print(refname, "has", len(ref), "windows")
+            for start in range(0, clen, window):
+                wlen = min(clen - start, window)
+                windows.append("{}:{:09d}-{:09d}".format(cname, start + base, start+wlen))
+        ret[refname] = windows
     return ret
 
 
@@ -87,3 +76,18 @@ def s2l2s(metadatafile):
         s2l[sample["anon.name"]] = sample["lane"]
         l2s[sample["lane"]].append(sample["anon.name"])
     return s2l, l2s
+
+def readlines(file):
+    with open(file) as fh:
+        return [l.rstrip("\n\r") for l in fh]
+
+def make_samplesets():
+    sets = dict()
+    all_samples = list()
+    for sset in glob("metadata/samplesets/*.txt"):
+        setname = splitext(basename(sset))[0]
+        samples =  readlines(sset)
+        sets[setname] = samples
+        all_samples.extend(samples)
+    sets["all-samples"] = list(set(all_samples))
+    return sets

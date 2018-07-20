@@ -1,30 +1,53 @@
 qc:
   adapter1: AGATCGGAAGAGCGGTTCAGCAGGAATGCCGAGACCGATCTCGTATGCCGTCTTCTGCTTG
   adapter2: AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT
+  minqual: 20
 
 minreads: 1000
 
+refs:
+  bdisv3: rawdata/references/Bdistachyon/assembly/Bdistachyon_314_v3.0.fa
+  bd21-3: rawdata/references/BdistachyonBd21_3_460_v1.1/assembly/BdistachyonBd21_3_460_v1.0.fa
+  bhybridum: rawdata/references/Bhybridum-pseudogenome/Bhybridum.fa
+
+
 mapping:
   aligners:
-    - ngm
+    #- ngm
     - bwa
   refs:
     - bdisv3
-
-refs:
-  bdisv3: rawdata/references/Bdis_v3/Bdistachyon_314_v3.0.fa
+    - bd21-3
+    - bhybridum
 
 varcall:
-  chunksize: 1000000
+  samplesets:
+    #- GBS-all
+    - GBS-bdis
+    - WGS-all
+  chunksize: 10000
   aligners:
-    - ngm
     - bwa
   callers:
-    #- freebayes
+    - freebayes
     - mpileup
   refs:
-    - bdisv3
-
+    - bd21-3
+      #- bhybridum
+  filters:
+    default: >
+      -i 'QUAL >= 10 &&
+          ALT != "." &&
+          INFO/DP >= 5 &&
+          INDEL=0 &&
+          INFO/AN >= 3'
+#    strict: >
+#      -i 'INFO/MQ >= 30 &&
+#          QUAL >= 40 &&
+#          ALT != "." &&
+#          INFO/DP >= 10 &&
+#          INDEL=0 &&
+#          ((INFO/AN / N_SAMPLES)*2) > 0.50'
 
 lanes:
   brachy_01:
@@ -35,8 +58,8 @@ lanes:
     combo: false
   brachy_04:
     combo: false
-  brachy_05:
-    combo: true
+#  brachy_05:
+#    combo: true
   brachy_06:
     combo: false
   brachy_09-10:

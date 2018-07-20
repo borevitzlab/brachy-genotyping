@@ -1,0 +1,55 @@
+
+rule identify_adaptors:
+    input:
+        idlog=expand("data/qcstats/adatpter-id/{lane}.txt", lane=LANE2SAMP)
+
+rule ar_id_adaptors:
+    input:
+        r1="rawdata/gbs/{lane}/{lane}_R1.fastq.gz",
+        r2="rawdata/gbs/{lane}/{lane}_R2.fastq.gz",
+    output:
+        idlog="data/qcstats/adatpter-id/{lane}.txt",
+    log:
+        "data/log/adapterremoval-idadapt/{lane}.log",
+    threads:
+        4
+    params:
+        adp1=config["qc"]["adapter1"],
+        adp2=config["qc"]["adapter2"],
+    shell:
+        "AdapterRemoval"
+        "   --file1 {input.r1}"
+        "   --file2 {input.r2}"
+        "   --adapter1 {params.adp1}"
+        "   --adapter2 {params.adp2}"
+        "   --identify-adapters"
+        "   --threads {threads}"
+        " >{output.idlog} 2>{log}"
+
+
+#######################################################################
+#                              Coverage                               #
+#######################################################################
+
+rule coverage:
+    input:
+        expand("data/coverage/{aligner}/{ref}/{sample}.mosdepth.dist.txt",
+               aligner=config["mapping"]["aligners"],
+               ref=config["mapping"]["refs"],
+               sample=SAMPLES),
+
+
+rule mosdepth_indiv:
+    input:
+        bam="data/alignments/{aligner}/{ref}/{sample}.bam",
+    output:
+        dist="data/coverage/{aligner}/{ref}/{sample}.mosdepth.dist.txt",
+    log:
+    threads: 1
+    shell:
+        "mosdepth"
+        "   --no-per-base"
+        "   -t {threads}"
+        "   --mapq 10"
+        "   data/coverage/{wildcards.aligner}/{wildcards.ref}/{wildcards.sample}"
+        "   {input.bam}"

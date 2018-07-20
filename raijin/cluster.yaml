@@ -11,7 +11,7 @@ ngmap:
   time: '1:00:00'
 
 bwamem:
-  time: '2:00:00'
+  time: '1:00:00'
 
 mergebam:
   time: '4:00:00'
