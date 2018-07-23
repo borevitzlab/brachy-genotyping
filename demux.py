@@ -23,7 +23,7 @@ def runaxe(lane):
     statsfile = "rawdata/gbs_demux/stats/" + lane + ".tsv"
     logfile =   "rawdata/gbs_demux/log/" + lane + ".log"
 
-    os.makedirs("rawdata/gbs_demux/reads/", exist_ok=True)
+    os.makedirs(outprefix, exist_ok=True)
     os.makedirs("rawdata/gbs_demux/stats/", exist_ok=True)
     os.makedirs("rawdata/gbs_demux/log/", exist_ok=True)
 

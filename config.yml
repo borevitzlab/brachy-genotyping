@@ -23,9 +23,9 @@ mapping:
 varcall:
   samplesets:
     #- GBS-all
-    - GBS-bdis
+    - GBS-distachyon
     - WGS-all
-  chunksize: 10000
+  chunksize: 1000000
   aligners:
     - bwa
   callers:
@@ -67,6 +67,8 @@ lanes:
   brachy_11-14:
     combo: true
   brachy_15-20:
+    combo: true
+  brachy_16-17:
     combo: true
   brachy_27-32:
     combo: true

@@ -5,7 +5,6 @@ configfile: "config.yml"
 shell.executable("/bin/bash")
 shell.prefix("set -euo pipefail; ")
 
-SAMP2LANE, LANE2SAMP = snkmk.s2l2s("metadata/brachy-metadata.csv")
 VARCALL_REGIONS = snkmk.make_regions(config["refs"], window=config["varcall"]["chunksize"])
 SAMPLESETS = snkmk.make_samplesets()
 
@@ -24,7 +23,7 @@ rule varcall:
 
 rule map:
     input:
-        expand("data/alignments/{aligner}/{ref}/{sample}.bam",
+        expand("data/alignments/{aligner}/{ref}/samples/{sample}.bam",
                aligner=config["mapping"]["aligners"],
                ref=config["mapping"]["refs"],
                sample=SAMPLESETS['all-samples']),
@@ -48,8 +47,7 @@ rule all:
 
 rule qcreads:
     input:
-        reads=lambda wc: "data/reads/raw/{lane}/{sample}.fastq.gz".format(
-                                lane=SAMP2LANE[wc.sample], sample=wc.sample),
+        reads="rawdata/samples/{sample}.fastq.gz"
     output:
         reads="data/reads/qc/{sample}.fastq.gz",
         settings="data/stats/adapterremoval/{sample}_settings.txt",
